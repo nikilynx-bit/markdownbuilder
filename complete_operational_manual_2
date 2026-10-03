@@ -1,0 +1,1129 @@
+---
+schema_version: "2.0"
+file_type: "complete_operational_manual"
+project: "Agentic AI for Policy Analysis — Full Portfolio"
+topic: "Heat Risk in Outdoor Workplaces"
+jurisdiction_primary: "Singapore"
+jurisdiction_comparative: "Global"
+course_reference: "Portfolio Cover Sheet — Weeks 2–10, 3 Projects × 10%"
+lifecycle: "Build → Deploy → Test → Document"
+principle: "The agent argues; you decide."
+---
+
+# Complete Operational Manual: Agentic AI for Heat-Risk Policy Analysis
+## Singapore Outdoor Worker Heat-Stress Rules & Global Comparators
+
+---
+
+## PART A: POLICY REGISTRY — EXACT POLICIES, DATES, TERMS & LINKS
+
+### A.1 Singapore — Primary Policy Target
+
+| Field | Detail |
+|---|---|
+| **Policy Name** | Workplace Safety and Health (General Provisions) Regulations — Heat Stress Management for Outdoor Workers |
+| **Enabling Act** | Workplace Safety and Health Act 2006 (Chapter 354A) |
+| **Regulatory Body** | Ministry of Manpower (MOM), Singapore |
+| **Advisory Body** | Workplace Safety and Health Council (WSH Council) |
+| **Commencement** | 1 December (verify year: 2023 or 2024 on Singapore Statutes Online) |
+| **Status** | Mandatory (verify enforcement vs. advisory phase) |
+| **Key Provisions** | Risk assessment, work-rest cycles, hydration, shade, acclimatisation, training, emergency response |
+| **Trigger Mechanism** | Wet-Bulb Globe Temperature (WBGT) index thresholds |
+| **Affected Sectors** | Construction, shipbuilding, landscaping, cleaning, waste, utilities, road works |
+| **Penalties** | Verify: composition sums, stop-work orders, prosecution under WSH Act |
+| **Official Source 1** | Singapore Statutes Online: `https://sso.agc.gov.sg/Act/WSHA2006` |
+| **Official Source 2** | MOM Workplace Safety: `https://www.mom.gov.sg/workplace-safety-and-health` |
+| **Official Source 3** | WSH Council: `https://www.wshc.sg` |
+| **Official Source 4** | MOM Newsroom: `https://www.mom.gov.sg/newsroom` |
+| **Search Query** | `"heat stress" AND "outdoor workers" AND site:mom.gov.sg` |
+
+#### Singapore — Key Terms & Definitions to Extract
+
+| Term | Definition to Verify |
+|---|---|
+| Heat stress | Physiological burden from heat exposure during work |
+| WBGT | Wet-Bulb Globe Temperature — composite index of heat, humidity, wind, solar radiation |
+| Outdoor work | Work performed in open areas exposed to solar radiation and ambient heat |
+| Work-rest cycle | Mandated ratio of labour to rest based on WBGT threshold |
+| Acclimatisation | Gradual physiological adaptation to heat over 7–14 days |
+| Heat illness | Spectrum: heat rash → heat cramps → heat exhaustion → heat stroke |
+| Competent person | Trained supervisor responsible for monitoring heat conditions |
+| Risk assessment | Employer duty to evaluate heat exposure before work commences |
+
+---
+
+### A.2 Global Comparator Policies — Enacted & In Force
+
+| # | Country / Region | Policy Name | Enacted | Key Provisions | Enforcement Mechanism | Official Link / Source |
+|---|---|---|---|---|---|---|
+| 1 | **California, USA** | Title 8, Section 3395 — Heat Illness Prevention Standard | 2005 (updated 2015, 2022) | Mandatory water, shade, rest breaks; high-heat procedures at 95°F; acclimatisation plan; emergency response | Cal/OSHA inspections; citations up to $25,000/violation | `https://www.dir.ca.gov/title8/3395.html` |
+| 2 | **Qatar** | Ministerial Decree No. 16 of 2007 — Midday Work Ban | 2007 (annual renewal) | Prohibits outdoor work 10:00–15:30, 1 June–31 August; mandates rest areas, water, first aid | Ministry of Labour inspections; site closure | Qatar Official Gazette; Ministry of Labour |
+| 3 | **UAE** | Ministerial Decree No. 318 of 2005 — Midday Break | 2005 (updated annually) | Bans outdoor work 12:30–15:00, 15 June–15 September; requires shaded rest, cold water, first aid | MOHRE inspections; fines per worker | `https://www.mohre.gov.ae` |
+| 4 | **Saudi Arabia** | Ministerial Decision No. 3337 — Outdoor Work Ban | 2014 | Prohibits outdoor work 12:00–15:00, 15 June–15 September | Ministry of Human Resources inspections | Saudi Official Gazette |
+| 5 | **Spain** | Royal Decree 486/1997 — Workplace Environmental Conditions | 1997 | Indoor temp 17–27°C; outdoor work must account for weather; risk assessment for extreme heat | Labour Inspectorate (ITSS) | BOE: `https://www.boe.es/buscar/doc.php?id=BOE-A-1997-8896` |
+| 6 | **Australia** | Model WHS Regulations — Managing Risks of Heat Stress | 2012 (model code) | Risk assessment; control measures; health monitoring; no specific national threshold | State regulators (SafeWork NSW, WorkSafe VIC, etc.) | `https://www.safeworkaustralia.gov.au` |
+| 7 | **EU (Framework)** | Council Directive 89/391/EEC — OSH Framework Directive | 1989 | General employer duty to assess and mitigate risks including thermal stress | National transposition; varies by member state | `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31989L0391` |
+| 8 | **South Korea** | Industrial Safety and Health Act — Heat Disorder Prevention Guidelines | 2019 (guidelines) | WBGT-based work-rest cycles; employer duty to provide water, shade, training | Ministry of Employment and Labor | MOEL guidelines |
+| 9 | **Japan** | Ordinance on Industrial Safety and Health — Heat Illness Prevention | 2019 (revised guidelines) | WBGT reference values; employer duty; acclimatisation; buddy system | Labour Standards Inspection Offices | MHLW: `https://www.mhlw.go.jp` |
+| 10 | **Bangladesh** | Bangladesh Labour Act 2006, Section 53 (general welfare) | 2006 | General ventilation/welfare; NO specific outdoor heat threshold | Department of Inspection for Factories and Establishments | `https://moil.gov.bd` |
+
+---
+
+### A.3 Countries with Intent but NO Binding Follow-Through
+
+| # | Country / Body | What Was Proposed | Year | Why It Stalled | Current Status | Source |
+|---|---|---|---|---|---|---|
+| 1 | **USA (Federal)** | OSHA Advanced Notice of Proposed Rulemaking (ANPRM) on Heat Injury Prevention | Oct 2021 | Political opposition; industry lobbying; regulatory review delays; no final rule issued | STALLED — Only General Duty Clause applies federally | `https://www.osha.gov/heat` |
+| 2 | **India** | National Heat Action Framework; Ahmedabad Heat Action Plan (2013) | 2013–2023 | No binding national law for outdoor workers; state-level plans are advisory; enforcement capacity weak | ADVISORY ONLY — No mandatory employer penalty | NDMA guidelines; Ahmedabad Municipal Corporation |
+| 3 | **EU** | Calls for specific occupational heat thresholds under Framework Directive | 2003–present | Subsidiarity principle; member states resist EU-level prescriptive thresholds; Framework Directive remains generic | NO SPECIFIC EU HEAT THRESHOLD — Only general duty | EU-OSHA reports; ETUC resolutions |
+| 4 | **Australia (National)** | Proposal for a national mandatory heat standard under Safe Work Australia | 2019–present | State jurisdiction fragmentation; industry opposition; model code remains guidance | NO NATIONAL MANDATE — States vary | Safe Work Australia consultation papers |
+| 5 | **UK** | TUC and Labour MPs called for maximum workplace temperature law | 2013, 2018, 2022 | Government position: "existing HSE regulations sufficient"; no specific temperature threshold enacted | NO SPECIFIC HEAT LAW — HSE says "reasonable" temperature | HSE: `https://www.hse.gov.uk/temperature/` |
+| 6 | **Canada (Federal)** | Canada Labour Code Part II — general safety duty; no specific heat standard | Ongoing | Provincial jurisdiction; no federal outdoor heat threshold | PROVINCIAL PATCHWORK — No federal standard | Canada Labour Code; provincial OHS bodies |
+| 7 | **Pakistan** | Sindh Heatwave Action Plan; no outdoor worker protection law | 2015+ | Legislative capacity; enforcement gaps; informal economy dominance | NO BINDING LAW | NDMA Pakistan; Sindh Govt |
+| 8 | **Thailand** | Ministerial Regulation on Safety in Hot Environments (proposed) | 2010s | Not enacted into enforceable standard; general OHS law applies | GENERAL DUTY ONLY | Ministry of Labour Thailand |
+
+---
+
+### A.4 Key Academic & Institutional References
+
+| Source | Title / Topic | Year | Relevance |
+|---|---|---|---|
+| ILO / WHO | "Working on a warmer planet: The impact of heat stress on labour productivity" | 2019 | Global evidence base; productivity loss projections |
+| NIOSH (USA) | Criteria for a Recommended Standard: Occupational Exposure to Hot Environments | 1986 (rev. 2016) | WBGT threshold methodology |
+| Lancet Countdown | Health impacts of climate change — occupational heat exposure | Annual | Global health evidence |
+| EU-OSHA | "Protecting workers from heat stress" | 2023 | EU policy gap analysis |
+| Safe Work Australia | "Managing the risks of heat stress in the workplace" | 2022 | Australian model guidance |
+| WSH Council (SG) | Heat Stress Management Guidelines for Outdoor Workplaces | Verify year | Singapore implementation guidance |
+
+---
+
+### A.5 Further Research Tasks for the Agent
+
+The agent should additionally investigate:
+
+- [ ] Whether Singapore's 1 Dec rules apply to **gig-economy delivery riders** (GrabFood, Foodpanda, Deliveroo)
+- [ ] Whether **migrant worker dormitory transit** (walking to sites) counts as "outdoor work"
+- [ ] How Singapore's rules interact with **HDB BTO construction timelines** and productivity targets
+- [ ] Whether **insurance premiums** in Singapore's construction sector are adjusted for heat compliance
+- [ ] Whether Singapore has a **national heat-health alert system** integrated with workplace scheduling
+- [ ] How Singapore's rules compare to **Qatar's 2022 World Cup worker protections** (supervisor-to-worker ratio, hydration stations)
+- [ ] Whether the **Singapore Green Plan 2030** intersects with occupational heat adaptation
+- [ ] Whether **Tripartite Partners (MOM, NTUC, SNEF)** issued joint guidance on heat stress
+- [ ] Whether **Workers' Compensation insurance** in Singapore covers heat illness explicitly
+- [ ] Whether Singapore's rules account for **PPE heat burden** (e.g., full-body harnesses, hard hats increasing thermal load)
+
+---
+
+## PART B: PROJECT 1 — EVIDENCE & RESEARCH AGENT (Weeks 2–3)
+
+### B.1 Agent Configuration
+
+| Field | Value |
+|---|---|
+| Agent Name | `SG_Heat_Evidence_Scout` |
+| Role | Find, grade, and map evidence on outdoor heat-stress policy |
+| Tools | Web search (restricted to .gov, .gov.sg, .who.int, .ilo.org, PubMed); Document reader; Citation extractor |
+| Gates | Gate 1: Human approves search queries before execution. Gate 2: Human verifies every citation before submission. |
+| Failure to Catch | A fabricated citation |
+
+### B.2 Multi-Shot Prompt — Evidence & Research
+
+```markdown
+# SYSTEM PROMPT — SG_Heat_Evidence_Scout
+
+You are a senior policy-research analyst specialising in occupational heat stress 
+and Singaporean regulatory law. You locate, grade, and synthesise evidence. 
+You NEVER fabricate sources. You flag uncertainty. You distinguish between 
+established evidence, contested evidence, and policy rumours.
+
+---
+
+## SHOT 1: Define Search Protocol
+
+TASK: Before searching, define your search protocol.
+
+OUTPUT FORMAT:
+- Research question (1 sentence)
+- Inclusion criteria (3–5 bullets)
+- Exclusion criteria (3–5 bullets)
+- Databases/sources to search (list)
+- Time range
+- Jurisdictions to cover
+
+EXAMPLE:
+Research question: "What is the evidence base for mandatory WBGT-triggered 
+work-rest cycles in reducing heat-related illness among outdoor construction 
+workers in tropical jurisdictions?"
+
+Inclusion criteria:
+- Peer-reviewed studies, systematic reviews, government reports
+- Published 2000–present
+- Focus on outdoor occupational heat exposure
+- Includes Singapore, Southeast Asia, Middle East, California, Australia
+
+Exclusion criteria:
+- Indoor thermal comfort studies
+- Athletic/sports heat studies
+- Non-occupational heat mortality
+- Opinion pieces without data
+
+---
+
+## SHOT 2: Execute Search and Grade Evidence
+
+TASK: Using the protocol from Shot 1, search and produce an Evidence Map.
+
+For EACH finding, output:
+| Claim | Source (author, year, title, URL/DOI) | Evidence Grade | Confidence | Jurisdiction |
+
+Evidence Grades:
+- ESTABLISHED: Multiple high-quality studies confirm
+- EMERGING: Limited but promising evidence
+- CONTESTED: Studies disagree or methodology is weak
+- INSUFFICIENT: Not enough data to conclude
+
+CRITICAL RULE: If you cannot verify a source exists, write:
+"[UNVERIFIED — requires human confirmation before inclusion]"
+
+---
+
+## SHOT 3: Identify Gaps and Contested Areas
+
+TASK: Based on the Evidence Map, identify:
+1. Three evidence GAPS (what we don't know)
+2. Two CONTESTED claims (where experts disagree)
+3. One POLICY RUMOUR circulating without evidence
+
+For each, explain WHY it matters for the Singapore 1 Dec policy decision.
+
+---
+
+## SHOT 4: Source Discipline Self-Check
+
+TASK: Review your own Evidence Map. For each citation:
+- Can you confirm the URL/DOI resolves?
+- Does the title match the claim you attributed to it?
+- Is the publication date correct?
+
+Flag ANY citation you cannot confirm with: [FLAG: UNVERIFIABLE]
+
+Output a Source Discipline Log:
+| Citation | Verified? | Method of verification | Notes |
+
+---
+
+## SHOT 5: Comparative Policy Scan
+
+TASK: Using the global policy registry provided, compare Singapore's approach 
+to at least THREE other jurisdictions.
+
+For each comparator, output:
+| Jurisdiction | Policy Instrument | Trigger Mechanism | Enforcement | Key Difference from SG |
+
+Prioritise:
+1. California §3395 (most detailed operational standard)
+2. Qatar/UAE midday bans (most relevant climate)
+3. Australia model code (most similar legal system)
+
+Flag: Which jurisdiction's approach does Singapore most closely resemble? 
+Where does Singapore diverge?
+
+---
+
+## SHOT 6: Failure Self-Audit
+
+TASK: Identify the WEAKEST part of your evidence map.
+- Where are you least confident?
+- Which claim would a hostile reviewer attack first?
+- What evidence would a Singaporean SME contractor cite to dispute your findings?
+
+Output: "Vulnerability Statement" — 3 sentences describing where your 
+evidence base is most fragile.
+```
+
+### B.3 Project 1 — Markdown Template
+
+```markdown
+# Project 1: Evidence Map & Source Discipline Log
+## Policy: SG MOM Outdoor Worker Heat-Stress Rules (1 Dec)
+## Agent: SG_Heat_Evidence_Scout
+## Date: [FILL]
+## Analyst: [FILL]
+
+---
+
+## 1. Search Protocol (Approved by Human at Gate 1)
+
+**Research Question:**
+> [FILL — 1 sentence]
+
+**Inclusion Criteria:**
+- [FILL]
+
+**Exclusion Criteria:**
+- [FILL]
+
+**Sources Searched:**
+| Database / Website | Date Searched | Results Found |
+|---|---|---|
+| Singapore Statutes Online | | |
+| MOM Newsroom | | |
+| WSH Council | | |
+| PubMed | | |
+| ILO / WHO | | |
+| Cal/OSHA / NIOSH | | |
+
+**Human Approval (Gate 1):**
+- [ ] Approved by: [NAME]
+- [ ] Date: [DATE]
+- [ ] Modifications required: [YES/NO — describe]
+
+---
+
+## 2. Evidence Map
+
+| # | Claim / Finding | Source | Year | Jurisdiction | Evidence Grade | Confidence |
+|---|---|---|---|---|---|---|
+| 1 | | | | | | |
+| 2 | | | | | | |
+| 3 | | | | | | |
+| 4 | | | | | | |
+| 5 | | | | | | |
+
+---
+
+## 3. Comparative Policy Matrix
+
+| Jurisdiction | Policy Instrument | Trigger | Enforcement | Key Difference from SG |
+|---|---|---|---|---|
+| Singapore | | | | — |
+| California | Title 8 §3395 | 95°F / 35°C | Cal/OSHA citations | |
+| Qatar | Decree 16/2007 | Time-of-day ban | Site closure | |
+| Australia | Model WHS Code | Risk assessment | State regulators | |
+
+---
+
+## 4. Evidence Gaps & Contested Claims
+
+### Gaps (What we don't know)
+1. [FILL]
+2. [FILL]
+3. [FILL]
+
+### Contested Claims (Experts disagree)
+1. [FILL]
+2. [FILL]
+
+### Policy Rumours (No evidence base)
+1. [FILL]
+
+---
+
+## 5. Source Discipline Log
+
+| Citation | URL / DOI | Verified? | Method | Notes |
+|---|---|---|---|---|
+| | | ☐ Yes ☐ No | | |
+| | | ☐ Yes ☐ No | | |
+| | | ☐ Yes ☐ No | | |
+
+**Human Approval (Gate 2):**
+- [ ] All citations independently verified by: [NAME]
+- [ ] Fabricated citations found: [YES/NO]
+- [ ] Corrections applied: [DESCRIBE]
+
+---
+
+## 6. Failure Log
+
+| # | What the agent got wrong | How it was caught | Correction applied |
+|---|---|---|---|
+| 1 | | | |
+| 2 | | | |
+
+---
+
+## 7. Vulnerability Statement
+
+> [FILL — 3 sentences: Where is this evidence map most fragile?]
+
+---
+
+## 8. Disclosure
+
+This evidence map was produced by an AI agent (`SG_Heat_Evidence_Scout`) 
+configured and supervised by [NAME]. All citations were independently 
+verified by the human analyst. Model: [MODEL NAME]. Date: [DATE].
+```
+
+---
+
+## PART C: PROJECT 2 — DIAGNOSIS & DESIGN AGENT (Weeks 4–7)
+
+### C.1 Agent Configuration
+
+| Field | Value |
+|---|---|
+| Agent Name | `SG_Heat_Policy_Architect` |
+| Role | Diagnose the problem, design 4 divergent options, then attack its own best option |
+| Tools | Access to Project 1 Evidence Map; regulatory text reader; theory-of-change template |
+| Gates | Gate 1: Human approves diagnosis. Gate 2: Human checks option divergence. Gate 3: Human verifies self-critique is genuinely adversarial. |
+| Failure to Catch | Fake-distinct options; a flattering self-critique |
+
+### C.2 Multi-Shot Prompt — Diagnosis & Design
+
+```markdown
+# SYSTEM PROMPT — SG_Heat_Policy_Architect
+
+You are a principal policy analyst for the Singapore Ministry of Manpower. 
+You design policy options and then attack them. You do NOT produce 
+cosmetic variants. Each option must have a fundamentally different 
+theory of change.
+
+---
+
+## SHOT 1: Problem Diagnosis
+
+TASK: Using the Evidence Map from Project 1, write a 1-page problem diagnosis.
+
+STRUCTURE:
+1. **What is the problem?** (1 paragraph)
+   - Define the specific harm: heat illness among outdoor workers in Singapore
+   - Quantify if possible (incidence, fatalities, productivity loss)
+   - Identify the regulatory gap the 1 Dec policy addresses
+
+2. **Who is affected?** (1 paragraph)
+   - Primary: outdoor workers (construction, landscaping, cleaning, shipbuilding)
+   - Secondary: employers (main contractors, SMEs, subcontractors)
+   - Tertiary: MOM/WSH regulators, insurers, public housing timelines
+   - Vulnerable: migrant workers, informal workers, gig-economy riders
+
+3. **What is the policy question?** (1 sentence)
+   - "How should Singapore design and enforce heat-stress protections for 
+     outdoor workers that are effective, enforceable, equitable, and 
+     climate-resilient?"
+
+4. **What does the evidence say?** (3 bullets from Evidence Map)
+   - Established: [FILL]
+   - Contested: [FILL]
+   - Gap: [FILL]
+
+5. **What are the constraints?** (3 bullets)
+   - Legal: [FILL]
+   - Economic: [FILL]
+   - Political: [FILL]
+
+---
+
+## SHOT 2: Generate Four Divergent Options
+
+TASK: Design FOUR policy options. Each must have a DIFFERENT theory of change.
+
+CRITICAL RULE: If two options differ only in "who enforces" or "how strict 
+the threshold is," they are NOT distinct. They must differ in MECHANISM.
+
+For EACH option, provide:
+
+| Field | Content |
+|---|---|
+| Option Name | [FILL] |
+| Core Mechanism | [What drives behaviour change?] |
+| Theory of Change | "If [X], then [Y], because [Z]." |
+| Target Population | [Who must act?] |
+| Responsible Authority | [Who enforces/funds?] |
+| Key Instrument | [Regulation / incentive / information / structure] |
+| Enforcement Method | [Inspection / self-report / sensor / insurance / criminal] |
+| Cost Estimate | [Qualitative: low / medium / high] |
+| Equity Impact | [Does it protect the most vulnerable?] |
+| Climate Trajectory | [Will it work at +2°C? +3°C?] |
+| Comparator Jurisdiction | [Which country does this resemble?] |
+
+REQUIRED DIVERGENCE:
+- Option A: Command-and-control (regulation, penalties, inspection)
+- Option B: Market/incentive (insurance, tax, subsidy)
+- Option C: Information/capacity (training, alerts, voluntary codes)
+- Option D: Structural/physical (engineering controls, temporal shifts, mechanisation)
+
+---
+
+## SHOT 3: Theory of Change Stress Test
+
+TASK: For each option, answer:
+
+1. What is the CRITICAL ASSUMPTION that must hold for this to work?
+2. What happens if that assumption FAILS?
+3. Which STAKEHOLDER benefits most? Which loses?
+4. Does this option protect MIGRANT WORKERS specifically, or only 
+   formal-sector Singaporean/PR employees?
+5. Does this option work for a 3-person landscaping SME as well as 
+   for a 5,000-worker HDB main contractor?
+
+---
+
+## SHOT 4: Adversarial Self-Critique (Red-Hat Mode)
+
+TASK: Select your STRONGEST option. Now switch persona.
+
+You are now THREE critics simultaneously:
+1. A cynical Singaporean SME subcontractor who cannot afford compliance
+2. A migrant worker advocate who suspects the policy is performative
+3. A climate scientist who thinks the thresholds will be obsolete by 2035
+
+ATTACK the option from all three perspectives. Do NOT soften. Do NOT 
+offer solutions. Do NOT say "this is a good idea but..."
+
+Structure your attack:
+- **As the SME subcontractor:** [FILL — 4 sentences minimum]
+- **As the migrant worker advocate:** [FILL — 4 sentences minimum]
+- **As the climate scientist:** [FILL — 4 sentences minimum]
+
+CRITICAL RULE: If your critique contains the phrase "overall this is 
+a strong option" or "the benefits outweigh the concerns," you have 
+FAILED. Delete and rewrite.
+
+---
+
+## SHOT 5: Comparative Policy Mapping
+
+TASK: For each of your four options, identify which existing global 
+policy it most closely resembles, and what that jurisdiction's 
+implementation experience teaches Singapore.
+
+| SG Option | Closest Global Comparator | What Worked There | What Failed There | Lesson for SG |
+|---|---|---|---|---|
+| A | California §3395 | | | |
+| B | [FILL] | | | |
+| C | [FILL] | | | |
+| D | Qatar/UAE midday ban | | | |
+
+---
+
+## SHOT 6: Failure Self-Audit
+
+TASK: Answer honestly:
+1. Are my four options genuinely distinct, or are they variations of 
+   "make a rule and enforce it"?
+2. Did my self-critique actually bite, or did I pull punches?
+3. Which option would I secretly prefer, and did that bias my critique?
+4. What would a hostile examiner say about my weakest option?
+
+Output: "Honesty Statement" — 3 sentences.
+```
+
+### C.3 Project 2 — Markdown Template
+
+```markdown
+# Project 2: Diagnosis, Design & Adversarial Critique
+## Policy: SG MOM Outdoor Worker Heat-Stress Rules (1 Dec)
+## Agent: SG_Heat_Policy_Architect
+## Date: [FILL]
+## Analyst: [FILL]
+
+---
+
+## 1. Problem Diagnosis (Approved at Gate 1)
+
+**The Problem:**
+> [FILL — 1 paragraph]
+
+**Affected Parties:**
+> [FILL — 1 paragraph]
+
+**Policy Question:**
+> [FILL — 1 sentence]
+
+**Evidence Summary:**
+- Established: [FILL]
+- Contested: [FILL]
+- Gap: [FILL]
+
+**Constraints:**
+- Legal: [FILL]
+- Economic: [FILL]
+- Political: [FILL]
+
+**Human Approval (Gate 1):**
+- [ ] Approved by: [NAME]
+- [ ] Date: [DATE]
+
+---
+
+## 2. Four Divergent Policy Options
+
+### Option A: Command-and-Control
+| Field | Content |
+|---|---|
+| Core Mechanism | |
+| Theory of Change | |
+| Target Population | |
+| Responsible Authority | |
+| Enforcement Method | |
+| Cost Estimate | |
+| Equity Impact | |
+| Climate Trajectory | |
+| Comparator | California §3395 |
+
+### Option B: Market / Incentive
+| Field | Content |
+|---|---|
+| Core Mechanism | |
+| Theory of Change | |
+| Target Population | |
+| Responsible Authority | |
+| Enforcement Method | |
+| Cost Estimate | |
+| Equity Impact | |
+| Climate Trajectory | |
+| Comparator | [FILL] |
+
+### Option C: Information / Capacity
+| Field | Content |
+|---|---|
+| Core Mechanism | |
+| Theory of Change | |
+| Target Population | |
+| Responsible Authority | |
+| Enforcement Method | |
+| Cost Estimate | |
+| Equity Impact | |
+| Climate Trajectory | |
+| Comparator | [FILL] |
+
+### Option D: Structural / Physical
+| Field | Content |
+|---|---|
+| Core Mechanism | |
+| Theory of Change | |
+| Target Population | |
+| Responsible Authority | |
+| Enforcement Method | |
+| Cost Estimate | |
+| Equity Impact | |
+| Climate Trajectory | |
+| Comparator | Qatar/UAE midday ban |
+
+---
+
+## 3. Human Divergence Check (Gate 2)
+
+- [ ] Are the four options genuinely distinct in mechanism? [Y/N]
+- [ ] Do they differ in theory of change, not just enforcement body? [Y/N]
+- [ ] Did the agent produce cosmetic variants? [Y/N]
+- [ ] If YES, what correction was applied? [DESCRIBE]
+
+**Human Approval (Gate 2):**
+- [ ] Approved by: [NAME]
+- [ ] Date: [DATE]
+
+---
+
+## 4. Adversarial Self-Critique (Unedited)
+
+**Agent's strongest option:** [FILL]
+
+### As the SME Subcontractor:
+> [FILL — minimum 4 sentences]
+
+### As the Migrant Worker Advocate:
+> [FILL — minimum 4 sentences]
+
+### As the Climate Scientist:
+> [FILL — minimum 4 sentences]
+
+**Human Critique Check (Gate 3):**
+- [ ] Is the critique genuinely adversarial? [Y/N]
+- [ ] Does it contain flattering language? [Y/N — if YES, reject and rerun]
+- [ ] Would this critique survive a hostile examiner? [Y/N]
+
+**Human Approval (Gate 3):**
+- [ ] Approved by: [NAME]
+- [ ] Date: [DATE]
+
+---
+
+## 5. Comparative Policy Mapping
+
+| SG Option | Closest Comparator | What Worked | What Failed | Lesson for SG |
+|---|---|---|---|---|
+| A | California §3395 | | | |
+| B | | | | |
+| C | | | | |
+| D | Qatar/UAE | | | |
+
+---
+
+## 6. Failure Log
+
+| # | What the agent got wrong | How it was caught | Correction applied |
+|---|---|---|---|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+
+---
+
+## 7. Honesty Statement
+
+> [FILL — 3 sentences: Where was I biased? Where did the agent pull punches?]
+
+---
+
+## 8. Disclosure
+
+This diagnosis and design was produced by an AI agent 
+(`SG_Heat_Policy_Architect`) configured and supervised by [NAME]. 
+The self-critique was generated by the same agent in adversarial mode 
+and reviewed by the human analyst. Model: [MODEL NAME]. Date: [DATE].
+```
+
+---
+
+## PART D: PROJECT 3 — APPRAISAL & GOVERNANCE AGENT TEAM (Weeks 8–10)
+
+### D.1 Team Configuration
+
+| Agent | Role | Rights | Can Write Final Report? | Can Approve Policy? |
+|---|---|---|---|---|
+| **Lead: Appraiser** | Orchestrates, synthesises, recommends | Read all; Write final brief | YES | NO — human decides |
+| **Sub-1: Legal** | Checks legal viability, jurisdictional competence | Read policy + Evidence Map; Write legal memo | NO | NO |
+| **Sub-2: Economic** | Models costs, feasibility, productivity impact | Read policy + Evidence Map; Write econ analysis | NO | NO |
+| **Sub-3: Red-Teamer** | Finds failure, corruption, drift, equity gaps | Read all; Write vulnerability matrix | NO | NO |
+
+**Permanent Red-Teamer Charter:**
+> "Your role is to find failure. You do not balance, you do not soften, 
+> you do not propose compromises. Report every vulnerability, regulatory 
+> loophole, enforcement gap, equity blind spot, and mission-drift risk 
+> you can identify. You NEVER say 'overall this is a good policy.' 
+> You NEVER offer solutions. You only attack."
+
+### D.2 Multi-Shot Prompt — Appraisal & Governance Team
+
+```markdown
+# SYSTEM PROMPT — Lead Agent: SG_Heat_Appraiser
+
+You are the Lead Policy Appraiser for the Singapore Ministry of Manpower. 
+You orchestrate a team of three sub-agents and synthesise their findings 
+into a final appraisal brief for the human decision-maker.
+
+YOU DO NOT MAKE THE POLICY DECISION. You recommend. The human decides.
+
+---
+
+## SHOT 1: Receive Policy Package and Define Appraisal Criteria
+
+TASK: You have received the following policy package for appraisal:
+- Option selected: [FILL — e.g., Option A + elements of Option D]
+- Policy text: Singapore 1 Dec outdoor worker heat-stress requirements
+- Evidence base: Project 1 Evidence Map
+- Design rationale: Project 2 Option Analysis
+
+Define the SEVEN appraisal criteria:
+1. Legal viability
+2. Economic feasibility
+3. Equity and distributional impact
+4. Enforceability
+5. Climate-trajectory robustness
+6. Governance and accountability
+7. Mission-drift risk
+
+For each criterion, specify:
+- What question must be answered?
+- Which sub-agent is responsible?
+- What evidence is needed?
+- What would constitute a PASS, CONCERN, or FAIL?
+
+---
+
+## SHOT 2: Delegate to Sub-Agent 1 — Legal & Compliance
+
+TASK for Sub-Agent 1:
+Review the policy package against:
+- Workplace Safety and Health Act 2006 (does MOM have authority?)
+- PDPA (does WBGT monitoring create privacy issues?)
+- Employment Act (does the work-rest mandate conflict with existing terms?)
+- ILO conventions (does Singapore's approach meet international obligations?)
+- Jurisdictional competence (is this MOM's remit or MOM + NEA + MOM jointly?)
+- International trade obligations (does this affect foreign contractor bidding?)
+
+OUTPUT: Legal Viability Memo
+- PASS / CONCERN / FAIL for each item
+- Specific statutory reference for each finding
+- Flag any area where the agent is uncertain
+
+CRITICAL: Do NOT propose legal fixes. Only identify issues.
+
+---
+
+## SHOT 3: Delegate to Sub-Agent 2 — Economic & Feasibility
+
+TASK for Sub-Agent 2:
+Model the economic impact:
+- Compliance cost per employer (segmented: main con / sub-con / SME)
+- Enforcement cost to MOM (inspectors needed, sensor infrastructure)
+- Productivity impact (lost hours, project delays, HDB BTO timeline risk)
+- Insurance market effects (premiums, claims)
+- Distributional impact (who bears the cost? who benefits?)
+- Transition cost for existing contracts already in flight
+
+OUTPUT: Economic Feasibility Analysis
+- Cost estimates (qualitative if quantitative not available)
+- Sensitivity: what if compliance cost is 2x estimate?
+- Flag any area where the agent is uncertain
+
+CRITICAL: Do NOT recommend whether the policy should proceed. Only model.
+
+---
+
+## SHOT 4: Delegate to Sub-Agent 3 — Permanent Red-Teamer
+
+TASK for Sub-Agent 3:
+You are the PERMANENT RED-TEAMER. Your charter:
+
+1. Find every way this policy FAILS.
+2. Find every way it is CAPTURED by industry.
+3. Find every way it DRIFTS from its original intent.
+4. Find every way it HARMS the most vulnerable workers.
+5. Find every ENFORCEMENT GAP.
+6. Find every REGULATORY LOOPHOLE.
+7. Find every CLIMATE MISMATCH (will it work in 2035? 2050?).
+
+SCENARIOS TO TEST:
+- What if a main contractor falsifies WBGT readings?
+- What if a migrant worker is afraid to report heat exhaustion?
+- What if the construction lobby lobbies for a "voluntary compliance" amendment?
+- What if MOM has 12 inspectors for 40,000 sites?
+- What if the threshold is calibrated to 2024 data but 2035 heat exceeds it?
+- What if a worker dies and the employer blames "pre-existing condition"?
+- What if the policy is passed but never funded for enforcement?
+- What if gig-economy riders (Grab, Foodpanda) are excluded?
+
+OUTPUT: Vulnerability Matrix
+| ID | Attack Vector | Mechanism | Consequence | Severity (1-5) |
+|---|---|---|---|---|
+
+CRITICAL RULES:
+- You NEVER propose solutions.
+- You NEVER say "overall this is a good policy."
+- You NEVER soften your findings.
+- You NEVER balance with positives.
+- You ONLY attack.
+
+---
+
+## SHOT 5: Synthesise — Lead Agent Combines Findings
+
+TASK: Combine the three sub-agent outputs into a unified appraisal.
+
+STRUCTURE:
+1. Executive Summary (5 sentences)
+2. Legal Viability: [PASS/CONCERN/FAIL] — summary
+3. Economic Feasibility: [PASS/CONCERN/FAIL] — summary
+4. Red-Team Findings: Top 5 vulnerabilities by severity
+5. Overall Assessment: [GO / REVISE / HALT]
+6. Conditions: If REVISE, what must change before proceeding?
+7. Dissent: Include the Red-Teamer's strongest objection verbatim.
+
+CRITICAL: You must include the Red-Teamer's findings UNEDITED. 
+Do not soften them. Do not omit them. Do not add "however, on balance..."
+
+---
+
+## SHOT 6: Submit to Human — Decision Gate
+
+TASK: Present the appraisal to the human decision-maker.
+
+FORMAT:
+"Minister / Permanent Secretary,
+
+The appraisal team has reviewed the policy package. 
+Our recommendation is [GO / REVISE / HALT].
+
+The Red-Teamer's strongest objection is: [QUOTE VERBATIM]
+
+The decision is yours. We provide analysis; you provide judgment.
+
+Respectfully submitted,
+SG_Heat_Appraisal_Swarm"
+
+CRITICAL: The agent RECOMMENDS. The human DECIDES. 
+The agent must NEVER say "I have decided" or "The policy is approved."
+
+---
+
+## SHOT 7: Failure Self-Audit
+
+TASK: Answer honestly:
+1. Did the Lead Agent suppress or soften the Red-Teamer's findings?
+2. Did any sub-agent exceed its mandate?
+3. Did the Lead Agent drift toward making the decision itself?
+4. Did the Economic Analyst start making legal judgments?
+5. Did the Legal Checker start recommending policy changes?
+6. Is the Red-Teamer's voice genuinely adversarial in the final report?
+
+Output: "Integrity Statement" — 3 sentences.
+```
+
+### D.3 Project 3 — Markdown Template
+
+```markdown
+# Project 3: Appraisal, Governance & Red-Team Report
+## Policy: SG MOM Outdoor Worker Heat-Stress Rules (1 Dec)
+## Agent Team: SG_Heat_Appraisal_Swarm
+## Date: [FILL]
+## Analyst: [FILL]
+
+---
+
+## 1. Team Configuration & Rights Audit
+
+| Agent | Role | Read Access | Write Access | Can Approve? | Exceeded Scope? |
+|---|---|---|---|---|---|
+| Lead: Appraiser | Orchestrate + synthesise | All | Final brief | NO | ☐ Y ☐ N |
+| Sub-1: Legal | Legal viability check | Policy + Evidence | Legal memo | NO | ☐ Y ☐ N |
+| Sub-2: Economic | Cost/feasibility model | Policy + Evidence | Econ analysis | NO | ☐ Y ☐ N |
+| Sub-3: Red-Teamer | Permanent adversary | All | Vulnerability matrix | NO | ☐ Y ☐ N |
+
+**Human Verification:**
+- [ ] No sub-agent wrote the final report: [CONFIRMED]
+- [ ] No sub-agent approved the policy: [CONFIRMED]
+- [ ] Red-Teamer's output is unedited in final report: [CONFIRMED]
+- [ ] Lead Agent did not soften Red-Team findings: [CONFIRMED]
+
+---
+
+## 2. Appraisal Criteria & Results
+
+| # | Criterion | Responsible Agent | Result | Key Finding |
+|---|---|---|---|---|
+| 1 | Legal viability | Sub-1 Legal | ☐ PASS ☐ CONCERN ☐ FAIL | |
+| 2 | Economic feasibility | Sub-2 Economic | ☐ PASS ☐ CONCERN ☐ FAIL | |
+| 3 | Equity & distributional impact | Lead + Red-Team | ☐ PASS ☐ CONCERN ☐ FAIL | |
+| 4 | Enforceability | Lead + Red-Team | ☐ PASS ☐ CONCERN ☐ FAIL | |
+| 5 | Climate-trajectory robustness | Red-Team | ☐ PASS ☐ CONCERN ☐ FAIL | |
+| 6 | Governance & accountability | Lead | ☐ PASS ☐ CONCERN ☐ FAIL | |
+| 7 | Mission-drift risk | Red-Team | ☐ PASS ☐ CONCERN ☐ FAIL | |
+
+---
+
+## 3. Legal Viability Memo (Sub-Agent 1)
+
+| Item | Statutory Reference | Finding | Notes |
+|---|---|---|---|
+| MOM authority under WSH Act | WSH Act s.[X] | | |
+| PDPA compliance for WBGT monitoring | PDPA s.[X] | | |
+| Employment Act compatibility | EA s.[X] | | |
+| ILO convention alignment | ILO C[X] | | |
+| Jurisdictional competence | | | |
+
+---
+
+## 4. Economic Feasibility Analysis (Sub-Agent 2)
+
+| Cost Category | Main Con | Sub-Con | SME (3-person) |
+|---|---|---|---|
+| Compliance cost (annual) | | | |
+| Enforcement cost (MOM) | | | |
+| Productivity impact | | | |
+| Transition cost | | | |
+
+**Sensitivity:** If compliance cost is 2x estimate, does the policy still proceed?
+> [FILL]
+
+---
+
+## 5. Red-Team Vulnerability Matrix (Sub-Agent 3 — UNEDITED)
+
+| ID | Attack Vector | Mechanism | Consequence | Severity |
+|---|---|---|---|---|
+| RT-01 | | | | /5 |
+| RT-02 | | | | /5 |
+| RT-03 | | | | /5 |
+| RT-04 | | | | /5 |
+| RT-05 | | | | /5 |
+| RT-06 | | | | /5 |
+| RT-07 | | | | /5 |
+
+**Red-Teamer's Strongest Objection (VERBATIM — do not edit):**
+> [FILL — paste Red-Teamer's most damaging finding word-for-word]
+
+---
+
+## 6. Lead Agent Synthesis & Recommendation
+
+**Executive Summary:**
+> [FILL — 5 sentences]
+
+**Overall Recommendation:** ☐ GO ☐ REVISE ☐ HALT
+
+**If REVISE — Conditions:**
+1. [FILL]
+2. [FILL]
+3. [FILL]
+
+**Dissent (Red-Teamer's voice, preserved):**
+> [FILL — the Red-Teamer's single strongest sentence]
+
+---
+
+## 7. Human Decision Gate (Gate 3)
+
+- **Agent Recommendation:** [GO / REVISE / HALT]
+- **Human Decision:** [GO / REVISE / HALT]
+- **Human Justification:** [FILL — why did you agree or override?]
+- **Did the human override the agent?** ☐ YES ☐ NO
+- **If YES, why?** [FILL]
+
+**Human Signature:**
+- [ ] Decision made by: [NAME]
+- [ ] Date: [DATE]
+- [ ] The agent recommended; the human decided. [CONFIRMED]
+
+---
+
+## 8. Orchestration Log
+
+| Timestamp | Agent | Action | Input | Output | Human Gate? |
+|---|---|---|---|---|---|
+| | Lead | Delegated to Legal | Policy text | Legal memo | No |
+| | Sub-1 | Completed legal review | Policy + Evidence | Legal memo | No |
+| | Sub-2 | Completed econ model | Policy + Evidence | Econ analysis | No |
+| | Sub-3 | Completed red-team | All inputs | Vulnerability matrix | No |
+| | Lead | Synthesised findings | 3 sub-outputs | Final brief | Gate 2 |
+| | HUMAN | Made decision | Final brief | GO/REVISE/HALT | Gate 3 |
+
+---
+
+## 9. Failure Log & Drift Check
+
+| # | What went wrong | Which agent | How caught | Correction |
+|---|---|---|---|---|
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
+
+**Drift Check:**
+- [ ] Did the Lead Agent make the decision instead of recommending? ☐ Y ☐ N
+- [ ] Did the Red-Teamer propose solutions (violating charter)? ☐ Y ☐ N
+- [ ] Did the Economic Agent make legal judgments (scope creep)? ☐ Y ☐ N
+- [ ] Did the Legal Agent recommend policy changes (scope creep)? ☐ Y ☐ N
+- [ ] Did the Lead Agent edit the Red-Teamer's findings? ☐ Y ☐ N
+
+---
+
+## 10. Integrity Statement
+
+> [FILL — 3 sentences: Was the process honest? Where did the agents 
+> drift? Where did the human have to intervene?]
+
+---
+
+## 11. Disclosure & Reproducibility
+
+- **Models used:** [FILL — e.g., GPT-4, Claude 3, etc.]
+- **Temperature settings:** [FILL]
+- **Prompt versions:** [FILL — hash or date-stamp]
+- **Number of runs:** [FILL]
+- **Human oversight hours:** [FILL]
+- **Known limitations:** [FILL]
+- **Responsible AI statement:** This appraisal was produced by a 
+  multi-agent AI system configured and supervised by [NAME]. The 
+  final policy decision was made by a human. The Red-Teamer's findings 
+  are included unedited. No sub-agent exceeded its defined permissions.
+
+---
+
+## 12. What This Appraisal CANNOT Tell You
+
+- [ ] It does not represent public consultation.
+- [ ] It does not measure actual compliance rates.
+- [ ] It does not predict political feasibility.
+- [ ] It does not replace legal advice from the Attorney-General's Chambers.
+- [ ] It does not account for informal economy workers not visible in data.
+- [ ] It is a decision-support tool, not a decision.
+```
+
+---
+
+## PART E: CROSS-PROJECT ARC & MARKING ALIGNMENT
+
+### E.1 The Adversary Arc
+
+| Project | Adversary | Human Role | Key Output |
+|---|---|---|---|
+| 1 — Evidence | None (single agent) | Verify citations, approve search | Evidence Map + Source Log |
+| 2 — Design | Agent critiques its own work | Check divergence, judge critique | 4 Options + Self-Attack |
+| 3 — Appraisal | Permanent Red-Teamer sub-agent | Final GO/REVISE/HALT decision | Appraisal + Red-Team Report |
+
+### E.2 Five Marking Criteria — How This Portfolio Satisfies Each
+
+| Criterion (20%) | Evidence in This Portfolio |
+|---|---|
+| 1. Policy-analysis value and fit | Real Singapore 1 Dec heat policy; global comparators; live regulatory decision |
+| 2. Architecture, workflow, human-approval design | Named agents, explicit gates, rights tables, orchestration logs |
+| 3. Deployment, evidence provenance, source discipline | Verified citations, graded evidence, comparative policy matrix |
+| 4. Testing, red-teaming, robustness, bias, failure analysis | Self-critique, permanent Red-Teamer, failure logs, drift checks |
+| 5. Documentation, reproducibility, oversight, responsible AI | Full templates, disclosure statements, reproducibility packages |
+
+### E.3 The Governing Principle
+
+> *"The agent argues; you decide. A submission that shows the agent 
+> failing and being corrected scores higher than a flawless-looking 
+> transcript. Finding the failure before it reaches a decision-maker 
+> is the skill."*
+
+Every project MUST include:
+- [ ] At least one visible, documented failure
+- [ ] The human catching the failure
+- [ ] The correction applied
+- [ ] The agent's output after correction
+
+---
+
+## PART F: FURTHER EXTENSIONS & FUTURE WORK
+
+### F.1 What the Agent Could Work On Next
+
+| Extension | Description |
+|---|---|
+| **Sentiment tracking** | Deploy the sentiment scrape spec (separate file) to monitor public reaction to the 1 Dec policy |
+| **Enforcement simulation** | Model inspection coverage: 12 inspectors × 40,000 sites = what % compliance? |
+| **Climate projection overlay** | Run the policy thresholds against IPCC SSP2-4.5 and SSP5-8.5 scenarios for Singapore 2035/2050 |
+| **Migrant worker voice** | Partner with TWC2 or Migrant Workers' Centre to gather ground-truth data (ethical approval required) |
+| **Cost-benefit analysis** | Quantify: cost of compliance vs. cost of heat-illness hospitalisations + workers' comp claims |
+| **Regulatory impact statement** | Draft a formal RIS for the policy, as required under Singapore's regulatory process |
+| **Parliamentary briefing** | Produce a 2-page brief for MPs ahead of a WSH Act amendment debate |
+| **International benchmarking report** | Full comparison: SG vs CA vs Qatar vs AU vs EU — who has the strongest standard? |
+| **Gig-economy extension** | Analyse whether delivery riders (Grab, Foodpanda, Deliveroo) are covered or excluded |
+| **Insurance linkage** | Model whether WSH insurance premiums could be indexed to heat-compliance scores |
+
+### F.2 Countries to Watch (Emerging / Pending)
+
+| Country | Status | Why It Matters |
+|---|---|---|
+| USA (Federal OSHA) | ANPRM stalled since 2021 | If enacted, becomes global benchmark |
+| India | Heat Action Plans advisory | 200M+ outdoor workers; no binding law |
+| EU | Framework Directive generic | If EU adds specific heat threshold, affects all 27 members |
+| UK | No specific heat law | Post-Brexit divergence from EU possible |
+| Brazil | NR-15 (heat exposure limits) | Relevant for tropical comparison |
+| South Africa | OHS Act general duty | African comparator |
+| Philippines | DOLE guidelines | ASEAN comparator |
+| Vietnam | Labour Code heat provisions | ASEAN comparator |
+| Indonesia | Manpower Law general welfare | ASEAN comparator |
+| Nigeria | No specific heat law | High-vulnerability, zero-protection case |
+
+---
+
+## PART G: FILE MANIFEST
+
+| File | Purpose | Project |
+|---|---|---|
+| `sg_heat_policy_operational_manual.md` | THIS FILE — complete operational manual | All |
+| `Project1_Evidence_Map_and_Failure_Log.md` | Evidence mapping, citation verification, failure log | 1 |
+| `Project2_Design_and_SelfCritique.md` | Diagnosis, 4 options, adversarial self-critique | 2 |
+| `Project3_Governance_and_RedTeam.md` | Appraisal, orchestration, Red-Team report, human decision | 3 |
+| `sg_outdoor_worker_heat_sentiment_scrape.md` | Sentiment scrape specification (separate) | Extension |
+
+---
+
+*End of Operational Manual.*
+*The agent argues. You decide.*
