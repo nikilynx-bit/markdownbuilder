@@ -1,0 +1,958 @@
+---
+schema_version: "1.0"
+file_type: "policy_sentiment_scrape_specification"
+project: "Agentic AI for Policy Analysis"
+owner: "nikilynx-bit"
+last_updated: "03-oct-2026"
+status: "draft_for_human_review"
+
+policy:
+  policy_id: "sg-mom-wsh-outdoor-heat-1dec"
+  slug: "singapore-outdoor-worker-heat-stress-1-dec"
+  short_title: "SG Outdoor Worker Heat-Stress Rules — 1 Dec"
+  working_title: >
+    Singapore Workplace Safety and Health heat-stress management requirements
+    for outdoor workers, commonly referred to as the 1 December outdoor-worker
+    heat rules.
+  official_title_to_verify: >
+    Workplace Safety and Health (Heat Stress Management for Outdoor Workers)
+    Regulations / equivalent WSH subsidiary legislation. Verify exact title,
+    year, and commencement date on Singapore Statutes Online and MOM.
+  jurisdiction: "Singapore"
+  lead_agencies:
+    - "Ministry of Manpower (MOM)"
+    - "Workplace Safety and Health Council (WSH Council)"
+  legal_basis_primary: "Workplace Safety and Health Act 2006"
+  legal_basis_subsidiary_to_verify: >
+    Workplace Safety and Health subsidiary legislation on heat-stress
+    management for outdoor workers. Verify exact instrument number and year.
+  commencement_date_assumed: "2024-12-01"
+  commencement_date_status: "verify_before_deployment"
+  alternative_commencement_dates_to_check:
+    - "2023-12-01"
+    - "2024-12-01"
+    - "2025-12-01"
+  policy_domain:
+    - "occupational safety and health"
+    - "heat stress"
+    - "outdoor work"
+    - "climate adaptation"
+    - "labour policy"
+    - "worker protection"
+  target_workers:
+    - "construction workers"
+    - "shipbuilding and ship-repair workers"
+    - "landscaping workers"
+    - "cleaning workers"
+    - "waste-management workers"
+    - "road and infrastructure workers"
+    - "utilities and maintenance workers"
+    - "delivery and logistics workers performing outdoor duties"
+    - "migrant workers in outdoor sectors"
+  languages:
+    - "en"
+    - "zh"
+    - "ms"
+    - "ta"
+
+scrape:
+  objective: >
+    Collect and classify public and stakeholder sentiment about Singapore’s
+    1 December outdoor-worker heat-stress policy. The focus is sentiment about
+    the policy’s necessity, adequacy, fairness, enforceability, compliance
+    burden, worker protection, and impact on outdoor workers.
+  unit_of_analysis: "publicly available text item"
+  sentiment_target: "policy and its implementation"
+  not_target:
+    - "general weather complaints unless linked to outdoor work policy"
+    - "indoor office thermal comfort unless explicitly compared to policy"
+    - "sports hydration advice unless linked to workplace policy"
+    - "non-Singapore heat policies unless used for comparison"
+---
+
+# Singapore Outdoor Worker Heat-Stress Policy — Sentiment Scrape Specification
+
+## 1. Purpose of this file
+
+This file defines how an agent or analyst should discover, collect, clean, classify, and document public sentiment about Singapore’s **1 December outdoor-worker heat-stress policy**.
+
+The agent should not simply ask: “Is this positive or negative?”
+
+It should answer:
+
+1. **Is the item relevant to the Singapore outdoor-worker heat policy?**
+2. **Which part of the policy is being discussed?**
+3. **Who is expressing the sentiment?**
+4. **Is the sentiment supportive, opposed, mixed, neutral, or uncertain?**
+5. **Which policy aspect is driving the sentiment?**
+6. **Is there a risk of misinformation, astroturfing, sarcasm, or translation error?**
+7. **Has a human reviewed high-impact or ambiguous cases?**
+
+The governing rule is:
+
+> **The agent collects and proposes; the human verifies and decides.**
+
+---
+
+## 2. Policy anchor — specific Singapore policy
+
+### 2.1 Working policy definition
+
+| Field | Value |
+|---|---|
+| Policy short name | SG Outdoor Worker Heat-Stress Rules — 1 Dec |
+| Policy issue | Heat stress / heat illness prevention for outdoor workers |
+| Jurisdiction | Singapore |
+| Lead agency | Ministry of Manpower, Singapore |
+| Related agency | Workplace Safety and Health Council |
+| Primary legislation | Workplace Safety and Health Act 2006 |
+| Subsidiary legislation | Verify exact WSH heat-stress regulation / amendment |
+| Assumed commencement | 1 December 2024 |
+| Commencement status | Must be verified against official source |
+| Main affected sectors | Construction, shipbuilding, landscaping, cleaning, waste, utilities, road works, outdoor maintenance, logistics with outdoor exposure |
+| Main worker groups | Formal employees, contract workers, migrant workers, temporary workers, outdoor supervisors |
+
+### 2.2 Official verification checklist
+
+Before scraping begins, a human must verify:
+
+- [ ] Exact statutory title.
+- [ ] Exact commencement date.
+- [ ] Whether the instrument is a standalone regulation or amendment.
+- [ ] Official MOM press release.
+- [ ] Official WSH Council guidance.
+- [ ] Enforcement start date, grace period, or advisory period.
+- [ ] Whether thresholds are based on WBGT, temperature, humidity, workload, or risk assessment.
+- [ ] Whether requirements are mandatory or advisory.
+- [ ] Penalties or enforcement consequences.
+- [ ] Sector-specific guidance, if any.
+
+### 2.3 Canonical official sources
+
+| Source ID | Source | Purpose | Access notes |
+|---|---|---|---|
+| `SG_SSO` | Singapore Statutes Online | Legal text and commencement information | Verify exact regulation title and date |
+| `SG_MOM` | Ministry of Manpower website | Policy guidance, press releases, advisories | Prefer `/newsroom`, `/press-releases`, `/guidelines` |
+| `SG_MOM_NEWS` | MOM Newsroom | Official announcements and enforcement updates | Use as anchor source |
+| `SG_WSHC` | Workplace Safety and Health Council | Practical guidance, toolkits, sector advisories | Useful for implementation language |
+| `SG_PARLIAMENT` | Parliament of Singapore | Hansard, parliamentary questions, debates | Useful for elite/policy sentiment |
+| `SG_GAZETTE` | Singapore Government Gazette | Commencement notifications | Use for legal confirmation |
+
+---
+
+## 3. Policy provisions likely to generate sentiment
+
+Use these provision IDs when tagging text. If the official regulation differs, update the provision list before large-scale scraping.
+
+| Provision ID | Policy area | Example public concern |
+|---|---|---|
+| `HS-01` | Heat-stress risk assessment | “Is risk assessment practical for small contractors?” |
+| `HS-02` | Heat exposure thresholds / WBGT triggers | “Are thresholds too strict or too weak?” |
+| `HS-03` | Work-rest cycles | “Will rest breaks delay projects?” |
+| `HS-04` | Drinking water and hydration | “Is water provision enough?” |
+| `HS-05` | Shade, cooling, and rest areas | “Do sites actually have shade?” |
+| `HS-06` | Acclimatisation for new workers | “Are migrant workers given time to adapt?” |
+| `HS-07` | Training and supervisor duties | “Do supervisors know heat-illness symptoms?” |
+| `HS-08` | Emergency response and reporting | “Will heat incidents be underreported?” |
+| `HS-09` | Recordkeeping and monitoring | “Paperwork burden or necessary accountability?” |
+| `HS-10` | Enforcement and penalties | “Will MOM actually inspect enough sites?” |
+| `HS-11` | Coverage of vulnerable workers | “Does it protect informal, temporary, or migrant workers?” |
+| `HS-12` | Productivity and project timelines | “Will compliance slow construction?” |
+| `HS-13` | Climate adaptation alignment | “Is this enough under worsening heat?” |
+
+---
+
+## 4. Sentiment mission
+
+### 4.1 Core sentiment questions
+
+The scrape should answer:
+
+1. Does the public discussion support or oppose the policy?
+2. Is the policy seen as protecting workers?
+3. Is it seen as burdensome to employers, especially small firms?
+4. Is enforcement seen as credible?
+5. Are the thresholds seen as scientifically appropriate?
+6. Are migrant and temporary workers seen as protected?
+7. Is the policy seen as climate-ready or insufficient?
+8. Are there claims of non-compliance, exemptions, or loopholes?
+9. Are unions, employer groups, workers, or NGOs framed differently?
+10. Is sentiment changing before and after commencement?
+
+### 4.2 Sentiment is aspect-based, not only document-level
+
+Do not reduce every item to one positive/negative label.
+
+Example:
+
+> “Good that MOM is finally protecting outdoor workers, but inspections are too rare to matter.”
+
+This should be coded as:
+
+| Aspect | Polarity |
+|---|---|
+| Worker protection | Positive |
+| Enforcement credibility | Negative |
+| Overall document stance | Mixed |
+
+---
+
+## 5. Stakeholder categories
+
+Use `unknown` where identity cannot be safely inferred.
+
+| Stakeholder ID | Category | Examples |
+|---|---|---|
+| `STK-WORKER` | Worker | Construction worker, cleaner, landscaper, outdoor technician |
+| `STK-MIGRANT_WORKER` | Migrant worker | Worker in dormitory or work-permit sectors |
+| `STK-UNION` | Union / worker representative | NTUC, sector unions, worker advocacy groups |
+| `STK-EMPLOYER` | Employer / contractor | Main contractor, subcontractor, facilities manager |
+| `STK-SME` | Small business | Small landscaping or cleaning firm |
+| `STK-INDUSTRY_ASSOC` | Industry association | Construction, cleaning, facilities management associations |
+| `STK-REGULATOR` | Regulator / government | MOM, WSH Council, enforcement officers |
+| `STK-NGO` | NGO / advocacy group | Worker welfare groups, climate justice groups |
+| `STK-ACADEMIC` | Expert / academic | OHS researcher, public-health expert |
+| `STK-MEDIA` | News media | Newspaper, online news outlet |
+| `STK-PUBLIC` | General public | Commenters, forum users, social media users |
+| `STK-UNKNOWN` | Unknown | Cannot infer safely |
+
+**Important:** Do not infer protected characteristics or immigration status unless explicitly stated and necessary. If stated, handle with extra care and minimize identifying details.
+
+---
+
+## 6. Source categories and access rules
+
+### 6.1 Source whitelist
+
+| Source ID | Source type | Examples | Access method | Risk level |
+|---|---|---|---|---|
+| `SRC-OFFICIAL` | Government | MOM, WSH Council, Parliament, Gazette | Direct download / permitted scraping | Low |
+| `SRC-NEWS` | News media | Singapore newspapers, online news | RSS, API, or permitted scraping | Medium |
+| `SRC-FORUM` | Public forums | Public forum threads, Reddit public subreddits | API or public-page scraping subject to ToS | Medium-high |
+| `SRC-SOCIAL` | Social media | Public posts via official APIs | API only where allowed | High |
+| `SRC-VIDEO` | Video platforms | Public videos and public comments | API where available; avoid private comments | High |
+| `SRC-NGO` | Advocacy / NGO | Worker welfare organisations, climate groups | Public reports and posts | Medium |
+| `SRC-EMPLOYER` | Employer / industry | Industry association statements, corporate posts | Public pages only | Medium |
+| `SRC-PRIVATE` | Private groups | WhatsApp, Telegram groups, private Facebook groups | **Do not scrape** | Prohibited |
+
+### 6.2 Access rules
+
+The agent must:
+
+- [ ] Respect `robots.txt`.
+- [ ] Respect platform Terms of Service.
+- [ ] Use official APIs where available.
+- [ ] Avoid scraping behind login walls.
+- [ ] Avoid private or members-only groups.
+- [ ] Rate-limit requests.
+- [ ] Store only necessary fields.
+- [ ] Avoid collecting personal identifiers unless required for accountability analysis and approved by a human.
+- [ ] Flag content containing personal data for deletion or minimization.
+- [ ] Do not attempt to re-identify anonymous workers.
+
+---
+
+## 7. Query seeds
+
+### 7.1 English queries
+
+```text
+"Singapore" AND "heat stress" AND "outdoor workers"
+"Singapore" AND "heatstroke" AND "outdoor workers"
+"MOM" AND "heat stress" AND "outdoor workers"
+"WSH" AND "heat stress" AND "outdoor workers"
+"Workplace Safety and Health" AND "heat stress" AND Singapore
+"heat stress management" AND "construction workers" AND Singapore
+"1 December" AND "heat stress" AND Singapore
+Singapore outdoor workers rest breaks hot weather regulation
+Singapore construction workers heat stress rules
+Singapore migrant workers heat protection
+Singapore landscaping workers hot sun regulation
+Singapore cleaning workers heat stress outdoor
+Singapore shipyard heat stress workers
+Singapore heat stress enforcement MOM
+Singapore heat stress risk assessment outdoor work
+```
+
+### 7.2 Mandarin Chinese queries
+
+```text
+新加坡 户外工人 热压力
+新加坡 户外工人 中暑
+新加坡 人力部 热压力
+新加坡 工作场所安全与健康 户外 高温
+新加坡 建筑工人 高温 休息
+新加坡 清洁工 高温 工作
+新加坡 外籍劳工 中暑
+新加坡 户外工作 热应激 规定
+新加坡 12月1日 户外工人
+```
+
+### 7.3 Malay queries
+
+```text
+Singapura tekanan haba pekerja luar
+Singapura strok haba pekerja luar
+MOM tekanan haba pekerja luar
+Singapura pekerja pembinaan cuaca panas
+Singapura pekerja pembersihan kerja luar panas
+Singapura langkah tekanan haba tempat kerja
+Singapura rehat pekerja luar cuaca panas
+```
+
+### 7.4 Tamil queries
+
+```text
+சிங்கப்பூர் வெளிப்புற தொழிலாளர்கள் வெப்ப அழுத்தம்
+சிங்கப்பூர் வெப்பத்தாக்கம் தொழிலாளர்கள்
+சிங்கப்பூர் வெளிப்புற பணியாளர்கள் வெப்பம்
+சிங்கப்பூர் கட்டுமான தொழிலாளர்கள் வெப்பம்
+சிங்கப்பூர் வெளிப்புற தொழிலாளர்கள் பாதுகாப்பு
+```
+
+### 7.5 Singlish / informal queries
+
+```text
+Singapore outdoor worker hot sun law
+construction worker heat stress Singapore
+MOM heat stress rules
+work under sun Singapore rest break
+Singapore site heatstroke MOM
+Singapore outdoor worker heat stroke rules
+```
+
+---
+
+## 8. Boolean search strings
+
+Use these as starting templates. Adapt per platform.
+
+### 8.1 Broad policy relevance
+
+```text
+("heat stress" OR "heatstroke" OR "hot environment" OR "heat illness")
+AND
+("outdoor workers" OR "construction workers" OR "cleaning workers" OR "landscaping workers" OR "shipyard workers" OR "road workers" OR "migrant workers")
+AND
+("Singapore" OR "MOM" OR "Ministry of Manpower" OR "WSH Council")
+```
+
+### 8.2 Commencement-specific
+
+```text
+("1 December" OR "1 Dec" OR "December 1")
+AND
+("heat stress" OR "heatstroke" OR "outdoor workers")
+AND
+("Singapore" OR "MOM" OR "WSH")
+```
+
+### 8.3 Enforcement-specific
+
+```text
+("MOM" OR "Ministry of Manpower" OR "WSH Council")
+AND
+("heat stress" OR "hot weather work")
+AND
+("enforcement" OR "penalty" OR "fine" OR "inspection" OR "stop-work order" OR "composition")
+AND
+("Singapore")
+```
+
+### 8.4 Worker-protection-specific
+
+```text
+("outdoor workers" OR "construction workers" OR "migrant workers")
+AND
+("heat stress" OR "heatstroke" OR "rest breaks" OR "shade" OR "drinking water")
+AND
+("Singapore")
+AND
+("protection" OR "safety" OR "rules" OR "regulation" OR "policy")
+```
+
+---
+
+## 9. Inclusion and exclusion rules
+
+### 9.1 Include if
+
+The item satisfies at least one of:
+
+- [ ] Mentions Singapore and outdoor workers and heat stress / heat illness.
+- [ ] Mentions MOM, WSH Council, or WSH rules in connection with heat.
+- [ ] Discusses Singapore outdoor work conditions under hot weather and refers to regulation, enforcement, employer duties, rest breaks, hydration, shade, or acclimatisation.
+- [ ] Quotes workers, employers, unions, NGOs, or officials on Singapore heat-work policy.
+- [ ] Discusses a Singapore heat incident at an outdoor workplace and links it to policy or employer duty.
+
+### 9.2 Exclude if
+
+The item is only about:
+
+- [ ] General hot weather with no workplace policy connection.
+- [ ] Indoor office cooling or air-conditioning.
+- [ ] Sports hydration with no workplace policy connection.
+- [ ] Non-Singapore heat policy, unless explicitly comparing with Singapore.
+- [ ] Heat pumps, appliances, or energy policy.
+- [ ] Pure weather forecasts.
+- [ ] Tourism or leisure heat advice.
+- [ ] Private personal conversations.
+
+### 9.3 Borderline cases
+
+Mark as `borderline` and send to human review if:
+
+- It mentions heat and Singapore but not outdoor work.
+- It mentions outdoor work but not policy.
+- It mentions policy but is satire or sarcasm.
+- It is machine-translated with low confidence.
+- It is from an anonymous account making serious non-compliance claims.
+- It may be coordinated or astroturfed.
+
+---
+
+## 10. Relevance scoring
+
+Assign a relevance score from 0 to 1.
+
+| Score | Definition |
+|---|---|
+| `0.0` | Not relevant |
+| `0.1–0.3` | Weak relevance; general heat or Singapore only |
+| `0.4–0.6` | Borderline; outdoor work or heat policy but missing key link |
+| `0.7–0.85` | Clearly relevant; discusses Singapore outdoor heat issue and policy implication |
+| `0.9–1.0` | Directly discusses the 1 Dec outdoor-worker heat policy or enforcement |
+
+### Required relevance conditions
+
+For automatic inclusion, require at least two of:
+
+1. Singapore context.
+2. Outdoor work or relevant sector.
+3. Heat stress / heat illness / hot work environment.
+4. Policy, regulation, employer duty, enforcement, rest breaks, hydration, shade, acclimatisation.
+
+If only one condition is present, mark as `borderline`.
+
+---
+
+## 11. Aspect taxonomy
+
+Use these aspect IDs for sentiment extraction.
+
+| Aspect ID | Aspect name | Meaning |
+|---|---|---|
+| `ASP-PROTECT` | Worker protection | Does the policy protect outdoor workers? |
+| `ASP-ADEQUACY` | Policy adequacy | Are measures strong enough? |
+| `ASP-ENFORCE` | Enforcement credibility | Will MOM inspect and enforce effectively? |
+| `ASP-COST` | Employer compliance cost | Is the policy costly or burdensome? |
+| `ASP-SME` | Small-firm feasibility | Can small companies comply? |
+| `ASP-PRODUCTIVITY` | Productivity impact | Will work slow down or projects be delayed? |
+| `ASP-FAIRNESS` | Fairness | Is the burden shared fairly across firms and workers? |
+| `ASP-MIGRANT` | Migrant worker inclusion | Are migrant workers protected in practice? |
+| `ASP-INFORMAL` | Informal / temporary work coverage | Are gaps present for informal or contract workers? |
+| `ASP-HEALTH` | Health urgency | Concern about heat illness, fainting, hospitalisation, death |
+| `ASP-TRAINING` | Training and awareness | Are workers and supervisors trained? |
+| `ASP-THRESHOLD` | Scientific threshold | Are triggers / WBGT rules appropriate? |
+| `ASP-REST` | Rest breaks | Are rest breaks practical and respected? |
+| `ASP-WATER` | Hydration | Is water provision sufficient? |
+| `ASP-SHADE` | Shade / cooling | Are rest areas adequate? |
+| `ASP-CLIMATE` | Climate adaptation | Is policy future-proof under worsening heat? |
+| `ASP-POLITICS` | Government trust | Trust or distrust in MOM / government action |
+| `ASP-COMPLIANCE` | Compliance behaviour | Expectation that firms will comply or evade |
+| `ASP-REPORTING` | Incident reporting | Concern about underreporting or fear of reporting |
+
+---
+
+## 12. Sentiment labels
+
+### 12.1 Document-level stance toward policy
+
+| Label | Definition |
+|---|---|
+| `supportive` | Supports the policy or says it is needed / good |
+| `opposed` | Opposes the policy or says it is bad / harmful |
+| `mixed` | Contains meaningful positive and negative evaluations |
+| `neutral_informational` | Reports facts without clear stance |
+| `questioning` | Raises questions without clear support or opposition |
+| `uncertain` | Cannot determine stance safely |
+
+### 12.2 Aspect-level polarity
+
+| Polarity | Definition |
+|---|---|
+| `positive` | The aspect is praised or viewed favourably |
+| `negative` | The aspect is criticised or viewed unfavourably |
+| `neutral` | No clear evaluative direction |
+| `mixed` | Both positive and negative within the same aspect |
+| `unclear` | Insufficient evidence |
+
+### 12.3 Intensity
+
+| Intensity | Definition |
+|---|---|
+| `low` | Mild or indirect evaluation |
+| `medium` | Clear evaluation |
+| `high` | Strong, urgent, angry, alarmed, or emphatic evaluation |
+
+### 12.4 Confidence
+
+| Confidence | Meaning |
+|---|---|
+| `high` | Clear language, explicit policy reference |
+| `medium` | Relevant but implicit or short |
+| `low` | Ambiguous, sarcastic, translated, or incomplete |
+
+---
+
+## 13. Machine-readable record schema
+
+Each scraped item should produce one record.
+
+```json
+{
+  "record_id": "sg-heat-000001",
+  "policy_id": "sg-mom-wsh-outdoor-heat-1dec",
+  "captured_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "source_id": "SRC-NEWS",
+  "source_name": "REPLACE_WITH_SOURCE_NAME",
+  "url": "https://example.org/item",
+  "url_canonical": "https://example.org/item",
+  "language_detected": "en",
+  "language_verified": null,
+  "published_at": "YYYY-MM-DD",
+  "author_type": "unknown",
+  "stakeholder_type": "STK-PUBLIC",
+  "title": "",
+  "text": "",
+  "text_normalized": "",
+  "translation_en": null,
+  "translation_confidence": null,
+  "policy_relevance": {
+    "is_relevant": true,
+    "relevance_score": 0.85,
+    "reason": "Mentions Singapore construction workers and heat-stress rules.",
+    "borderline": false,
+    "human_review_required": false
+  },
+  "policy_reference": {
+    "policy_id": "sg-mom-wsh-outdoor-heat-1dec",
+    "mentions_mom": true,
+    "mentions_wsh": false,
+    "mentions_1_dec": true,
+    "mentions_outdoor_work": true,
+    "mentions_heat_stress": true,
+    "provisions_mentioned": ["HS-03", "HS-04", "HS-10"]
+  },
+  "document_sentiment": {
+    "stance": "mixed",
+    "polarity_score": 0.1,
+    "intensity": "medium",
+    "confidence": "high"
+  },
+  "aspect_sentiments": [
+    {
+      "aspect_id": "ASP-PROTECT",
+      "polarity": "positive",
+      "intensity": "medium",
+      "evidence": "It is good that workers get rest breaks."
+    },
+    {
+      "aspect_id": "ASP-ENFORCE",
+      "polarity": "negative",
+      "intensity": "high",
+      "evidence": "But nobody checks the sites."
+    }
+  ],
+  "risk_flags": {
+    "possible_sarcasm": false,
+    "possible_misinformation": false,
+    "possible_astroturf": false,
+    "possible_pii": false,
+    "possible_harassment": false,
+    "low_translation_confidence": false,
+    "coordinated_signal": false
+  },
+  "human_review": {
+    "reviewed": false,
+    "reviewer": null,
+    "decision": null,
+    "notes": null
+  }
+}
+```
+
+---
+
+## 14. Data fields to collect
+
+| Field | Required? | Notes |
+|---|---:|---|
+| `record_id` | Yes | Unique ID |
+| `policy_id` | Yes | Use `sg-mom-wsh-outdoor-heat-1dec` |
+| `captured_at_utc` | Yes | Timestamp of collection |
+| `source_id` | Yes | Controlled source category |
+| `source_name` | Yes | Actual outlet / platform |
+| `url` | Yes | Public URL |
+| `published_at` | Yes if available | Use source metadata |
+| `language_detected` | Yes | Detect language |
+| `title` | Optional | Keep if available |
+| `text` | Yes | Full relevant text |
+| `text_normalized` | Yes | Lowercase, remove URLs if needed |
+| `translation_en` | Conditional | If language is not English |
+| `translation_confidence` | Conditional | Flag low confidence |
+| `policy_relevance` | Yes | Score and reason |
+| `stakeholder_type` | Yes | Use controlled list |
+| `document_sentiment` | Yes | Stance, intensity, confidence |
+| `aspect_sentiments` | Yes | Aspect-based sentiment |
+| `risk_flags` | Yes | Sarcasm, PII, misinformation, etc. |
+| `human_review` | Yes | Required for borderline / high-impact cases |
+
+---
+
+## 15. Agent prompt for relevance and sentiment coding
+
+Use this prompt only after a human has approved the sample design.
+
+```text
+You are a Singapore policy-sentiment coder. Your task is to classify whether a text item is relevant to Singapore’s outdoor-worker heat-stress policy and, if relevant, to extract aspect-based sentiment.
+
+You must be conservative. If uncertain, use "uncertain" or flag for human review. Do not invent facts, quotes, or stakeholder identities.
+
+Policy anchor:
+- Singapore outdoor-worker heat-stress requirements associated with 1 December commencement.
+- Topics include heat stress, heatstroke, outdoor work, rest breaks, hydration, shade, acclimatisation, risk assessment, WBGT thresholds, employer duties, MOM enforcement, and WSH guidance.
+
+Rules:
+1. First determine relevance.
+2. If not relevant, set is_relevant=false and stop.
+3. If relevant, identify stakeholder type only if explicitly inferable.
+4. Do not infer ethnicity, immigration status, or other protected attributes unless explicitly stated and necessary.
+5. Extract aspect-level sentiment only where evidence exists in the text.
+6. Quote only short snippets from the original text as evidence.
+7. If the text is sarcastic, ambiguous, or possibly misinformation, flag it.
+8. If the text is machine-translated and uncertain, lower confidence.
+9. Separate sentiment about weather from sentiment about policy.
+10. Do not replace the human decision-maker.
+
+Output JSON only, using this schema:
+{
+  "is_relevant": boolean,
+  "relevance_score": number,
+  "relevance_reason": string,
+  "borderline": boolean,
+  "human_review_required": boolean,
+  "stakeholder_type": string,
+  "document_stance": ["supportive", "opposed", "mixed", "neutral_informational", "questioning", "uncertain"],
+  "document_intensity": ["low", "medium", "high"],
+  "document_confidence": ["low", "medium", "high"],
+  "aspects": [
+    {
+      "aspect_id": string,
+      "polarity": ["positive", "negative", "neutral", "mixed", "unclear"],
+      "intensity": ["low", "medium", "high"],
+      "evidence": string
+    }
+  ],
+  "risk_flags": {
+    "possible_sarcasm": boolean,
+    "possible_misinformation": boolean,
+    "possible_astroturf": boolean,
+    "possible_pii": boolean,
+    "possible_harassment": boolean,
+    "low_translation_confidence": boolean,
+    "coordinated_signal": boolean
+  }
+}
+```
+
+---
+
+## 16. Human-in-the-loop gates
+
+| Gate | Human action | Stop condition |
+|---|---|---|
+| Gate 1 | Approve policy title, commencement date, and legal source | If official title/date cannot be verified |
+| Gate 2 | Approve source list and access method | If source violates ToS or privacy rules |
+| Gate 3 | Review 20-item pilot sample for relevance | If precision is below acceptable threshold |
+| Gate 4 | Review 20-item pilot sample for sentiment coding | If labels are inconsistent or biased |
+| Gate 5 | Review high-risk flags | If misinformation, PII, or harassment detected |
+| Gate 6 | Approve final dataset before analysis | If documentation incomplete |
+| Gate 7 | Approve final policy-sentiment summary | Agent recommends; human decides |
+
+---
+
+## 17. Workflow
+
+### Step 1 — Verify policy anchor
+
+Agent:
+
+- Finds official MOM / WSH / SSO pages.
+- Extracts title, commencement date, and duties.
+
+Human:
+
+- Confirms legal accuracy.
+
+### Step 2 — Build query pack
+
+Agent:
+
+- Generates English, Chinese, Malay, Tamil, and informal queries.
+- Maps queries to source types.
+
+Human:
+
+- Checks for overbreadth and missing languages.
+
+### Step 3 — Collect pilot sample
+
+Agent:
+
+- Collects 50–100 items across official, news, forum, and public social sources.
+- Stores metadata.
+
+Human:
+
+- Reviews access compliance.
+
+### Step 4 — Clean and deduplicate
+
+Agent:
+
+- Removes duplicates.
+- Normalizes text.
+- Detects language.
+- Flags missing dates.
+
+Human:
+
+- Checks sample before deletion or transformation.
+
+### Step 5 — Code relevance
+
+Agent:
+
+- Labels relevant / not relevant / borderline.
+- Gives relevance score.
+
+Human:
+
+- Audits at least 10–20% of pilot.
+
+### Step 6 — Code sentiment
+
+Agent:
+
+- Extracts document stance and aspect sentiment.
+- Provides evidence snippets.
+
+Human:
+
+- Audits ambiguous, high-intensity, and high-risk items.
+
+### Step 7 — Red-team and bias test
+
+Agent:
+
+- Runs negative controls, sarcasm tests, and translation tests.
+- Flags failures.
+
+Human:
+
+- Reviews failure log and decides whether to adjust prompts or rules.
+
+### Step 8 — Aggregate and report
+
+Agent:
+
+- Produces counts by aspect, stakeholder, language, source, and time.
+- Highlights notable quotes and uncertainty.
+
+Human:
+
+- Approves final narrative.
+
+---
+
+## 18. Red-team tests
+
+| Test | Example input | Expected behaviour |
+|---|---|---|
+| Negative control | “The weather is hot today in Singapore.” | Relevant only if linked to outdoor work policy; otherwise low relevance |
+| Indoor distractor | “Office air-conditioning is too cold.” | Not relevant |
+| Non-Singapore distractor | “Malaysia introduces heat rules for outdoor workers.” | Not relevant unless comparing with Singapore |
+| Sarcastic post | “Great, another rule that nobody will enforce.” | Detect negative enforcement sentiment and possible sarcasm |
+| Astroturf signal | Many near-identical posts at same time | Flag possible coordinated behaviour |
+| Machine translation error | Chinese/Malay/Tamil post mistranslated | Low confidence, human review |
+| PII risk | Post names worker, employer, and phone number | Flag PII; minimize or remove |
+| Misinformation claim | “MOM will arrest workers who drink too little water.” | Flag possible misinformation; verify against official source |
+| Mixed sentiment | “Good rule but small contractors cannot cope.” | Code positive protection, negative cost/feasibility |
+| Flawless transcript | Agent reports no errors in pilot | Treat as failure; require failure log |
+
+---
+
+## 19. Bias and representativeness risks
+
+The scraper must document:
+
+- [ ] Over-representation of English-language sources.
+- [ ] Under-representation of migrant-worker voices.
+- [ ] Over-representation of employer or industry perspectives.
+- [ ] Platform bias, e.g., Reddit may skew younger/public commentary.
+- [ ] News media framing may overrepresent official sources.
+- [ ] Informal workers may be invisible online.
+- [ ] Sentiment may reflect dissatisfaction with enforcement, not the policy principle.
+- [ ] Machine translation may distort Mandarin, Malay, Tamil, or Singlish meaning.
+- [ ] Coordinated campaigns may distort apparent public opinion.
+
+Mitigation:
+
+- Use multilingual queries.
+- Include worker NGOs and official guidance.
+- Do not treat volume as consensus.
+- Report uncertainty.
+- Separate “what people say” from “what evidence supports”.
+
+---
+
+## 20. Responsible AI and data protection rules
+
+The agent must:
+
+1. Not scrape private groups or locked content.
+2. Not collect more personal data than necessary.
+3. Not attempt to identify individual workers.
+4. Flag vulnerable-worker content for special care.
+5. Comply with platform terms and Singapore data-protection expectations.
+6. Keep a log of all collection decisions.
+7. Preserve evidence provenance.
+8. Disclose AI-assisted coding.
+9. Allow human override at every stage.
+10. Avoid presenting sentiment as definitive public opinion unless sampling supports it.
+
+---
+
+## 21. Output metrics
+
+For the final analysis, report:
+
+| Metric | Description |
+|---|---|
+| Total items collected | Raw count before deduplication |
+| Total relevant items | After relevance filtering |
+| Items by language | English, Chinese, Malay, Tamil, other |
+| Items by source type | Official, news, forum, social, NGO |
+| Items by stakeholder type | Worker, employer, NGO, public, regulator, unknown |
+| Document stance distribution | Supportive, opposed, mixed, neutral, questioning, uncertain |
+| Aspect polarity distribution | Positive/negative by aspect |
+| High-intensity negative aspects | Top concerns |
+| High-intensity positive aspects | Top praises |
+| Borderline rate | Percentage sent to human review |
+| Risk flag rate | Sarcasm, misinformation, PII, astroturf |
+| Translation low-confidence rate | Percentage requiring caution |
+| Time trend | Sentiment before/after 1 Dec |
+
+---
+
+## 22. Example coded item
+
+### Original text
+
+> “It is about time MOM does something about construction workers fainting in the heat. But if there are no surprise inspections, contractors will just sign forms and ignore the rest breaks.”
+
+### Expected coding
+
+```json
+{
+  "is_relevant": true,
+  "relevance_score": 0.9,
+  "relevance_reason": "Directly discusses MOM, construction workers, heat, and rest breaks.",
+  "borderline": false,
+  "human_review_required": false,
+  "stakeholder_type": "STK-PUBLIC",
+  "document_stance": "mixed",
+  "document_intensity": "medium",
+  "document_confidence": "high",
+  "aspects": [
+    {
+      "aspect_id": "ASP-PROTECT",
+      "polarity": "positive",
+      "intensity": "medium",
+      "evidence": "It is about time MOM does something about construction workers fainting in the heat."
+    },
+    {
+      "aspect_id": "ASP-ENFORCE",
+      "polarity": "negative",
+      "intensity": "high",
+      "evidence": "if there are no surprise inspections, contractors will just sign forms and ignore the rest breaks."
+    }
+  ],
+  "risk_flags": {
+    "possible_sarcasm": false,
+    "possible_misinformation": false,
+    "possible_astroturf": false,
+    "possible_pii": false,
+    "possible_harassment": false,
+    "low_translation_confidence": false,
+    "coordinated_signal": false
+  }
+}
+```
+
+---
+
+## 23. Project lifecycle alignment
+
+This specification supports the portfolio lifecycle:
+
+| Lifecycle stage | How this file supports it |
+|---|---|
+| Build | Defines role, sources, queries, gates, labels, and schema |
+| Deploy | Provides pilot workflow and real policy anchor |
+| Test | Includes red-team tests, negative controls, and failure flags |
+| Document | Requires logs, human review, disclosure, and reproducibility |
+
+---
+
+## 24. Minimum deliverables
+
+At the end of the scrape, the analyst should have:
+
+- [ ] Verified policy anchor with official citation.
+- [ ] Source list with access permissions.
+- [ ] Query log.
+- [ ] Raw metadata log.
+- [ ] Deduplicated dataset.
+- [ ] Relevance labels.
+- [ ] Sentiment labels.
+- [ ] Aspect-level analysis.
+- [ ] Human review log.
+- [ ] Red-team / failure log.
+- [ ] Responsible-AI disclosure.
+- [ ] Final memo: “What the sentiment shows, what it cannot show, and what decision-makers should note.”
+
+---
+
+## 25. Final caution
+
+Sentiment scraping does not equal public consultation.
+
+It may show:
+
+- visible reactions,
+- media framing,
+- stakeholder concerns,
+- possible enforcement anxieties,
+- misinformation patterns.
+
+It does **not** automatically show:
+
+- representative worker opinion,
+- silent majority views,
+- actual compliance levels,
+- causal policy impact,
+- legal correctness.
+
+Use the results as **decision support**, not as the decision itself.
