@@ -1,0 +1,165 @@
+---
+document_type: "Agent Mission Brief & Retrieval Playbook"
+project: "Agentic AI for Policy Analysis (Portfolio)"
+target_domain: "Occupational Heat Stress Policy"
+primary_jurisdiction: "Singapore"
+agent_role: "Autonomous Policy Researcher & Comparator Analyst"
+core_directive: "Do not rely on parametric memory for legal facts. Go to the live web, retrieve current data, verify primary sources, and present findings with provenance."
+---
+
+# 🕵️ Agent Mission Brief & Retrieval Playbook
+## Singapore Outdoor Heat Policy & Global Comparators
+
+**Instructions for the Agent:** 
+This document does not contain the answers. It contains the *framework for finding the answers*. Your job is to use your web search, scraping, and document retrieval tools to fill in the blank matrices below. You must prioritize **primary sources** (government gazettes, statutory boards, peer-reviewed databases) over secondary sources (news articles, blogs). 
+
+**The Golden Rule:** If you cannot provide a live, verifiable URL to a primary government or academic source for a legal claim, you must flag it as `[UNVERIFIED - REQUIRES HUMAN CHECK]`.
+
+---
+
+## PART 1: THE SINGAPORE ANCHOR (Live Retrieval Mission)
+
+**Context:** There are ongoing regulatory movements in Singapore regarding outdoor worker heat stress (often discussed in the context of a December 1st commencement or enforcement phase, tied to MOM and WSH Council). 
+
+**Your Mission:** Go to the live web and find the *exact, current legal status* of this policy as of today's date.
+
+### 1.1 Target Domains & Search Operators
+Execute searches using these specific parameters. Do not rely on general web summaries.
+
+| Target Source | Domain | Required Search Operators / Queries |
+|---|---|---|
+| **Singapore Statutes Online** | `sso.agc.gov.sg` | `"heat stress" OR "outdoor" OR "temperature" site:sso.agc.gov.sg` |
+| **MOM Newsroom** | `mom.gov.sg/newsroom` | `"heat" AND ("outdoor" OR "construction" OR "landscape") site:mom.gov.sg` |
+| **WSH Council** | `wshc.sg` | `"heat stress management" OR "WBGT" site:wshc.sg` |
+| **Parliamentary Debates** | `parliament.gov.sg` | `"heat stress" AND "outdoor workers" site:parliament.gov.sg` |
+| **Government Gazette** | `egazette.gov.sg` | `"Workplace Safety and Health" AND "heat" site:egazette.gov.sg` |
+
+### 1.2 The Retrieval Matrix (Agent to Fill)
+*Once you have executed the searches, populate this matrix. If a field cannot be verified via a primary source URL, write "NOT FOUND IN PRIMARY SOURCES".*
+
+| Policy Dimension | Agent's Retrieved Finding | Primary Source URL (Must be live) | Verification Status |
+|---|---|---|---|
+| **Exact Legal Title** | [Retrieve] | [Insert URL] | [ ] Verified |
+| **Enabling Act** | [Retrieve] | [Insert URL] | [ ] Verified |
+| **Exact Commencement Date** | [Retrieve] | [Insert URL] | [ ] Verified |
+| **Trigger Mechanism** (e.g., WBGT, Temp) | [Retrieve] | [Insert URL] | [ ] Verified |
+| **Mandatory vs. Advisory** | [Retrieve] | [Insert URL] | [ ] Verified |
+| **Penalty Structure** | [Retrieve] | [Insert URL] | [ ] Verified |
+
+---
+
+## PART 2: GLOBAL COMPARATOR DISCOVERY (Live Retrieval Mission)
+
+**Context:** To design good policy, we must look at how other jurisdictions handle extreme heat. We need to find **three distinct regulatory approaches** currently in force globally.
+
+**Your Mission:** Search the live web to find one example of each of the following regulatory archetypes. Retrieve their current legal status (e.g., has the US Federal OSHA finalized its rule yet?).
+
+### 2.1 Archetype Search Strategy
+
+**Archetype A: The Temporal Ban (Time-of-Day Restriction)**
+*   *Hypothesis:* Middle Eastern countries often use this.
+*   *Search Queries:* `"midday work ban" AND "outdoor workers" AND ("2024" OR "2025" OR "2026") site:*.gov`
+*   *Target:* Find the exact ministerial decree and current enforcement dates.
+
+**Archetype B: The Threshold & Trigger Standard (Command & Control)**
+*   *Hypothesis:* US States or specific national OHS bodies use WBGT or temperature triggers.
+*   *Search Queries:* `"heat illness prevention standard" AND ("WBGT" OR "trigger") site:*.gov`
+*   *Target:* Look specifically at California (Title 8) or Washington State. Check if US Federal OSHA's ANPRM has moved to a Final Rule.
+
+**Archetype C: The General Duty / Risk Assessment Approach**
+*   *Hypothesis:* UK, EU, or Australia rely on broader "duty of care" laws rather than specific heat numbers.
+*   *Search Queries:* `"heat stress" AND "guidance" AND ("HSE" OR "Safe Work Australia") site:*.gov`
+*   *Target:* Find the official guidance document and verify if it carries the weight of law or is purely advisory.
+
+### 2.2 Comparator Matrix (Agent to Fill)
+
+| Archetype | Jurisdiction Found | Exact Policy/Rule Name | Current Status (Active/Stalled) | Primary Source URL |
+|---|---|---|---|---|
+| **Temporal Ban** | [Retrieve] | [Retrieve] | [Retrieve] | [Insert URL] |
+| **Threshold** | [Retrieve] | [Retrieve] | [Retrieve] | [Insert URL] |
+| **General Duty** | [Retrieve] | [Retrieve] | [Retrieve] | [Insert URL] |
+| **Stalled/Intent** | [Retrieve] | [Retrieve] | [Retrieve] | [Insert URL] |
+
+---
+
+## PART 3: MULTI-SHOT SYSTEM PROMPTS (For Agent Configuration)
+
+*Use these multi-shot prompts to configure your LLM's behavior. They teach the agent HOW to think, search, and verify, using examples of good and bad agentic behavior.*
+
+### Prompt 1: The "Source Discipline & Anti-Hallucination" Prompt
+```text
+You are an elite policy researcher. Your greatest risk is hallucinating legal statutes or URLs. You must use multi-step verification.
+
+[SHOT 1: BAD BEHAVIOR - DO NOT DO THIS]
+User: What is the Singapore law for outdoor heat?
+Agent: The Singapore Outdoor Heat Act of 2023 mandates rest breaks. You can read it here: https://sso.agc.gov.sg/Acts/OutdoorHeat2023
+Critique: FAILURE. The agent relied on parametric memory, invented a plausible-sounding Act, and hallucinated a URL structure.
+
+[SHOT 2: GOOD BEHAVIOR - DO THIS]
+User: What is the Singapore law for outdoor heat?
+Agent: 
+1. Executing search: site:sso.agc.gov.sg "heat stress" OR "outdoor"
+2. Executing search: site:mom.gov.sg "heat stress management"
+3. Analyzing results... I found references to the "Workplace Safety and Health (General Provisions) Regulations" and WSH Council guidelines on Heat Stress Management. 
+4. I cannot confirm a standalone "Outdoor Heat Act". 
+5. I will output the exact titles of the WSH guidelines I found, with their live URLs, and flag the exact commencement date for human verification.
+Critique: SUCCESS. The agent used tools, recognized the limits of its knowledge, and relied on retrieved URLs rather than invented ones.
+```
+
+### Prompt 2: The "Comparator Status Check" Prompt
+```text
+You are tracking the lifecycle of global heat policies. Policies change from "Proposed" to "Enacted" to "Stalled". You must retrieve the CURRENT status.
+
+[SHOT 1: BAD BEHAVIOR]
+User: Does the US have a federal heat standard?
+Agent: Yes, OSHA created a heat standard to protect workers.
+Critique: FAILURE. Outdated/Inaccurate. OSHA has been working on one, but stating it exists as a finalized standard is legally dangerous misinformation.
+
+[SHOT 2: GOOD BEHAVIOR]
+User: Does the US have a federal heat standard?
+Agent: 
+1. Searching: site:osha.gov "heat injury and illness" "rulemaking status"
+2. Retrieving current OSHA regulatory agenda...
+3. Finding: OSHA published an ANPRM in 2021 and held hearings, but as of my current search date, a Final Rule has not been published in the Federal Register. 
+4. Conclusion: There is NO finalized federal heat standard yet. Employers are currently cited under the OSH Act's "General Duty Clause." I will provide the link to the OSHA heat rulemaking tracker.
+Critique: SUCCESS. The agent distinguished between *intent/rulemaking* and *enacted law*, and provided the current procedural reality.
+```
+
+---
+
+## PART 4: THE HUMAN-IN-THE-LOOP (HITL) GATES
+
+*This section is for the Human Analyst. The agent must stop and present its findings at these gates before proceeding to the next phase of the portfolio.*
+
+### GATE 1: The Provenance Check (End of Part 1)
+- [ ] **Agent Action:** Present the Singapore Retrieval Matrix.
+- [ ] **Human Action:** Click every URL provided by the agent. 
+- [ ] **Failure Check:** Did the agent invent a URL? Did it link to a news article instead of the actual statute? 
+- [ ] **Correction:** If yes, reject the matrix, document the hallucination in the Failure Log, and force the agent to re-run the search using stricter domain operators.
+
+### GATE 2: The Divergence Check (End of Part 2)
+- [ ] **Agent Action:** Present the Global Comparator Matrix.
+- [ ] **Human Action:** Review the 3 archetypes. Are they actually different mechanisms (e.g., Time Ban vs. WBGT Trigger)? 
+- [ ] **Failure Check:** Did the agent just find 3 countries that all use the exact same WBGT threshold? (This is a "fake-distinct" failure).
+- [ ] **Correction:** If yes, instruct the agent: "You failed to find a Temporal Ban. Go search specifically for Middle East or South Asian midday work bans."
+
+---
+
+## PART 5: THE FAILURE & ACCOUNTABILITY LOG (For Portfolio Submission)
+
+*The Cover Sheet explicitly states: "A submission that shows the agent failing and being corrected scores higher than a flawless-looking transcript." Use this log to document the agent's retrieval errors.*
+
+| Incident # | What the Agent Attempted to Retrieve | The Failure (Hallucination / Dead End / Bias) | How the Human Caught It | The Correction Applied to the Agent's Prompt/Tools |
+|---|---|---|---|---|
+| **01** | *e.g., Singapore Commencement Date* | *Agent confidently stated "Dec 1, 2023" based on a cached 2022 news article.* | *Human checked MOM newsroom and found the enforcement was delayed/advisory until 2024.* | *Added rule: "Always cross-reference news claims with the official Government Gazette or Statutes Online commencement notices."* |
+| **02** | | | | |
+| **03** | | | | |
+
+---
+
+## PART 6: NEXT STEPS (Dynamic Handoff to Project 2 & 3)
+
+Once the Agent has successfully populated Parts 1 and 2, and the Human has approved the matrices at Gates 1 and 2, this retrieved data becomes the **immutable context** for the next agents:
+
+1.  **Handoff to Project 2 (Design Agent):** "Using the verified Singapore WSH framework and the 3 verified global comparators, design 4 divergent enforcement options for Singapore."
+2.  **Handoff to Project 3 (Appraisal Agent):** "Using the retrieved penalty structures and global failure cases, red-team the proposed Singapore enforcement mechanism."
